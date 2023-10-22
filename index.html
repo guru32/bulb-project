@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #off{
+        height: 552px;
+        width: 320px;
+        }
+    </style>
 </head>
 <body >
-    <div >
+    <div style="height: auto;">
     <h1>Bulb project</h1>
     <img src="bulboff.png" alt="off" id="off" ><br>
     <img src="bulbon.png" alt="on" id="on" style="display: none;"><br>
-    <button onclick="bulb()" ondblclick="">Click me to on</button>
+    <h3 style="color: red; display:none;" id="p">Great! You have done</h3>
+    <br>
+    <button onclick="bulb()" style="height: 29px; width: 108px; background-color: aquamarine;" >Click me to on</button> <button onclick="bulb2()"style="height: 29px; width: 108px; background-color: aquamarine;">Click me to off</button>
 </div>
 </body>
 <script>
     function bulb(){
         var imgage1 = document.getElementById("off");
         var imgage2 = document.getElementById("on");
-        if(imgage1.style.display === "none"){
-            imgage2.style.display = "block";
-        }
-        
-        else{
-            imgage1.style.display = "none";
-        }
+        var p = document.getElementById("p");
+        imgage1.style.display = "none";
+     imgage2.style.display = "block";
+     
+     p.style.display = "block";
     }
-    
+    function bulb2(){
+        var imgage1 = document.getElementById("off");
+        var imgage2 = document.getElementById("on");
+        var p = document.getElementById("p");
+     imgage1.style.display = "block";
+     imgage2.style.display = "none";
+     p.style.display = "none";
+    }
 </script>
 </html>
